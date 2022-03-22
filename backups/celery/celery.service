@@ -1,0 +1,13 @@
+[Unit]
+Description=Another test.
+After=network.target
+
+[Service]
+WorkingDirectory=/home/mic/python/backups/backups/celery/
+ExecStart=/usr/bin/bat celeryconfig.py
+User=mic
+Group=mic
+
+[Install]
+WantedBy=multi-user.target
+

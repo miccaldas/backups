@@ -1,0 +1,15 @@
+[Unit]
+Description=Celery Powered Folder Backups.
+After=network.target
+
+[Service]
+WorkingDirectory=/home/mic/python/backups/backups/celery
+ExecStart=/usr/bin/celery -A celery worker -E --loglevel=INFO
+TimeoutStartSec=25h
+User=mic
+Group=mic
+Type=simple
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
