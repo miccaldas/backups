@@ -1,0 +1,11 @@
+[Unit]
+Description=Chooses entry from the cli_apps db and opens it in a browser.
+Requires=app_reminder.service
+
+[Timer]
+Unit=>app_reminder.service
+OnActiveSec=2 h
+
+[Install]
+WantedBy=timers.target
+

@@ -1,10 +1,10 @@
 [Unit]
-Description=Another test.
+Description=Searches for a entry in the cli_apps db and opens its url.
 After=network.target
 
 [Service]
-WorkingDirectory=/home/mic/python/backups/backups/celery/
-ExecStart=/usr/bin/bat celeryconfig.py
+WorkingDirectory=/home/mic/python/cli_apps/cli_apps
+ExecStart=/usr/bin/python3.10 app_reminder.py
 User=mic
 Group=mic
 
